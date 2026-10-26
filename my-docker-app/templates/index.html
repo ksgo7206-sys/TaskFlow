@@ -1,0 +1,28 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>To-Do</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Task Manager</h1>
+    <p class="subtitle">Your productivity starts here.</p>
+
+    <form action="/add" method="POST">
+        <input name="task" placeholder="New task" required>
+        <button>Add</button>
+    </form>
+
+    <ul>
+        {% for task in tasks %}
+        <li>
+            {{ task }}
+            <form action="/delete/{{ loop.index0 }}" method="POST">
+                <button>Delete</button>
+            </form>
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
