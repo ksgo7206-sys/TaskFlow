@@ -1,0 +1,131 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+    max-width: 760px;
+    min-height: 100vh;
+    margin: 0 auto;
+    padding: 60px 24px;
+    color: #f1f5f9;
+
+    background:
+        radial-gradient(ellipse at 10% 10%, #312e81 0%, transparent 40%),
+        radial-gradient(ellipse at 90% 80%, #164e63 0%, transparent 40%),
+        #080d1d;
+}
+
+h1 {
+    text-align: center;
+    font-size: 44px;
+    font-weight: 800;
+    letter-spacing: -1.5px;
+    margin-bottom: 12px;
+    background: linear-gradient(90deg, #60a5fa, #a78bfa, #22d3ee);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.subtitle {
+    text-align: center;
+    color: #94a3b8;
+    margin-bottom: 35px;
+    font-size: 16px;
+}
+
+input {
+    width: 70%;
+    padding: 15px;
+    color: white;
+    background: #111a30;
+    border: 1px solid #334155;
+    border-radius: 12px;
+    font-size: 15px;
+    outline: none;
+    transition: 0.25s;
+}
+
+input:focus {
+    border-color: #818cf8;
+    box-shadow: 0 0 0 3px #818cf833;
+}
+
+input::placeholder {
+    color: #94a3b8;
+}
+
+button {
+    padding: 13px 18px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #6366f1, #8b5cf6);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px #6366f155;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 25px;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    margin: 14px 0;
+    padding: 16px 18px;
+    background: linear-gradient(135deg, #151e33, #101729);
+    border: 1px solid #293957;
+    border-radius: 14px;
+    color: #e2e8f0;
+    transition: 0.2s;
+}
+
+li:hover {
+    border-color: #818cf8;
+    transform: translateY(-2px);
+}
+
+li form {
+    margin: 0;
+}
+
+li button {
+    background: #3b1828;
+    color: #fda4af;
+    padding: 9px 13px;
+}
+
+li button:hover {
+    background: #9f1239;
+    color: white;
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 35px 16px;
+    }
+
+    h1 {
+        font-size: 34px;
+    }
+
+    input {
+        width: 65%;
+    }
+
+    li {
+        padding: 12px;
+    }
+}
